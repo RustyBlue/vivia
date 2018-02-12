@@ -579,7 +579,7 @@ void vtkVgEventRepresentation::Update()
         color[1] *= m;
         color[2] *= m;
         }
-      colors->InsertNextTupleValue(color);
+      colors->InsertNextTypedTuple(color);
       }
 
     if (forcedTracks)

@@ -427,7 +427,7 @@ void vsScenePrivate::createSelectorMask(ContourInfo& info)
 
     unsigned char color[4];
     this->FilteringMaskColor.fillArray(color);
-    uca->InsertNextTupleValue(color);
+    uca->InsertNextTypedTuple(color);
 
     pd->GetCellData()->SetScalars(uca);
     pd->SetPoints(points);

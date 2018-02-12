@@ -433,7 +433,7 @@ void vtkVgActivity::PrepareRepresentation()
         color[1] = this->Color[1] * 255;
         color[2] = this->Color[2] * 255;
         }
-      uca->InsertNextTupleValue(color);
+      uca->InsertNextTypedTuple(color);
       ba->InsertNextValue(phase > 0);
       }
 

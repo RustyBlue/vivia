@@ -160,8 +160,8 @@ void vtkVgInteractorStyleRubberBand2D::OnLeftButtonDown()
 
     unsigned char color[]     = { 200, 230, 250,  50 };
     unsigned char edgeColor[] = {  60, 173, 255, 255 };
-    UCA->InsertNextTupleValue(edgeColor);
-    UCA->InsertNextTupleValue(color);
+    UCA->InsertNextTypedTuple(edgeColor);
+    UCA->InsertNextTypedTuple(color);
 
     PD->GetCellData()->SetScalars(UCA);
     PD->SetPoints(this->RubberBandPoints);

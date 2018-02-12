@@ -299,7 +299,7 @@ void vtkVgEventRegionRepresentation::Update()
                    this->Internal->RegionActor->GetProperty()->GetOpacity();
         }
 
-      this->Internal->EventColorArray->InsertNextTupleValue(color);
+      this->Internal->EventColorArray->InsertNextTypedTuple(color);
       }
     }
 
