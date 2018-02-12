@@ -563,13 +563,13 @@ void vtkVgVideoRepresentation0::UpdateMarker(vtkImageData* imageData)
 //-----------------------------------------------------------------------------
 void vtkVgVideoRepresentation0::MakeLinear(vtkMatrix4x4* mat)
 {
-  double w = mat->Element[3][3];
+  double w = mat->GetElement(3, 3);
   for (int i = 0; i < 4; ++i)
     {
     for (int j = 0; j < 4; ++j)
       {
-      mat->Element[i][j] /= w;
+      mat->SetElement(i, j, mat->GetElement(i, j) / w);
       }
     }
-  mat->Element[2][2] = 1.0;
+  mat->SetElement(2, 2, 1.0);
 }

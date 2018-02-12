@@ -215,7 +215,7 @@ SetupActorTransform(vtkPolyDataCollection* polyDataCollection,
           {
           for (int j = 0; j < 4; j++)
             {
-            correctedMatrix->Element[i][j] *= -1;
+            correctedMatrix->SetElement(i, j, -correctedMatrix->GetElement(i, j));
             }
           }
         representationMatrix = correctedMatrix;
