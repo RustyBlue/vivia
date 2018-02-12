@@ -929,10 +929,10 @@ void vtkVg2DGraphMapper::PrintSelf(ostream& os, vtkIndent indent)
 }
 
 //----------------------------------------------------------------------------
-unsigned long vtkVg2DGraphMapper::GetMTime()
+vtkMTimeType vtkVg2DGraphMapper::GetMTime()
 {
-  unsigned long mTime = this->vtkMapper::GetMTime();
-  unsigned long time;
+  vtkMTimeType mTime = this->vtkMapper::GetMTime();
+  vtkMTimeType time;
 
   if (this->LookupTable != NULL)
     {

@@ -468,10 +468,10 @@ bool vtkVgContourOperatorManager::EvaluatePoint(double testPt[3])
 }
 
 //----------------------------------------------------------------------------
-unsigned long vtkVgContourOperatorManager::GetMTime()
+vtkMTimeType vtkVgContourOperatorManager::GetMTime()
 {
-  unsigned long mTime = this->Superclass::GetMTime();
-  unsigned long time;
+  vtkMTimeType mTime = this->Superclass::GetMTime();
+  vtkMTimeType time;
 
   // filters
   time = this->Internals->GetContoursMTime(this->Internals->Filters);

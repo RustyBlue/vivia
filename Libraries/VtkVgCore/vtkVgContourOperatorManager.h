@@ -63,7 +63,7 @@ public:
 
   // Description:
   // Return the Modified tim accounting for changes to actual contour objects
-  virtual unsigned long GetMTime();
+  virtual vtkMTimeType GetMTime();
 
 //BTX
 protected:
