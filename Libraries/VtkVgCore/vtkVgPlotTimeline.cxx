@@ -175,7 +175,7 @@ bool vtkVgPlotTimeline::Paint(vtkContext2D* painter)
     for (int i = 0; i < this->Selection->GetNumberOfTuples(); ++i)
       {
       vtkIdType id = 0;
-      this->Selection->GetTupleValue(i, &id);
+      this->Selection->GetTypedTuple(i, &id);
       if (id % 2 == 0 && id < this->Points->GetNumberOfPoints() - 1)
         {
         double p[4];

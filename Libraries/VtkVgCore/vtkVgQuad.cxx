@@ -48,16 +48,16 @@ vtkSmartPointer<vtkActor> vtkVgQuad::CreateQuad(double ulx, double uly,
   double texCoord[2];
   texCoord[0]=0.0;
   texCoord[1]=0.0;
-  texCoords->SetTupleValue(0,texCoord);
+  texCoords->SetTypedTuple(0,texCoord);
   texCoord[0]=1.0;
   texCoord[1]=0.0;
-  texCoords->SetTupleValue(1,texCoord);
+  texCoords->SetTypedTuple(1,texCoord);
   texCoord[0]=1.0;
   texCoord[1]=1.0;
-  texCoords->SetTupleValue(2,texCoord);
+  texCoords->SetTypedTuple(2,texCoord);
   texCoord[0]=0.0;
   texCoord[1]=1.0;
-  texCoords->SetTupleValue(3,texCoord);
+  texCoords->SetTypedTuple(3,texCoord);
   texCoords->Modified();
 
   vtkSmartPointer<vtkPolyData> quadGeom = vtkSmartPointer<vtkPolyData>::New();
