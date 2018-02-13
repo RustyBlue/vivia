@@ -22,6 +22,7 @@
 #include <vtkPoints.h>
 #include <vtkTimeStamp.h>
 
+#include <algorithm>
 #include <assert.h>
 #include <map>
 
